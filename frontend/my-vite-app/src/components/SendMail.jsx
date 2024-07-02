@@ -31,8 +31,9 @@ const SendMail = () => {
   };
 
   return (
-    <div className="flex max-w-4xl items-center justify-center min-h-screen bg-green-400 p-4">
-      <form className="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg">
+    <div className="flex max-w-4xl flex-col items-center justify-center min-h-screen bg-green-400 p-4">
+        <h5 className="font-bold font-serif">Send Email</h5>
+      <form className="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg mt-4">
         <div className="mb-4 flex justify-center items-center gap-4 p-5 rounded-lg">
           <label htmlFor="to" className="block text-gray-700 mb-2">
             To:{" "}
@@ -50,7 +51,7 @@ const SendMail = () => {
 
         <div className="mb-4 flex justify-center items-center gap-4 p-5 rounded-lg">
           <label htmlFor="subject" className="block text-gray-700 mb-2">
-            Subject
+            Subject:
           </label>
           <input
             type="text"
