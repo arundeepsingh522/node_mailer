@@ -21,12 +21,22 @@ const SendMail = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+
+  useEffect(() => {
+    if (data) {
+      toastHelpers.notifySuccess(data.message);
+    } else if (error) {
+      toastHelpers.notifyError("Mail Not Sent. Something went wrong.");
+    }
+  }, [data, error]);
+  const handleSubmit = async(e) => {
     console.log("hello");
     e.preventDefault();
     console.log("hello");
     console.log("formData", formData);
-    sendEmail(formData);
+   await sendEmail(formData);
+
+    //check for error
     console.log("err", error, "data", data, "loading", loading);
   };
 

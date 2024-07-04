@@ -17,7 +17,6 @@ const useMail = () => {
       console.log("calling api");
       const response = await axios.post('http://localhost:3000/sendEmail', formData);
       console.log("reponse getting from backend", response);
-
       console.log("response data", response.data);
       setData(response.data);
       setError(false);
